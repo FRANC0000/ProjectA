@@ -1,0 +1,17 @@
+<!-- {{saluda}} -->
+<div class="app-all-web" [ngClass]="theme == 'light' ? 'body-light' : 'body-dark'">
+    <!-- [ngClass]=" !formService.isPatched ? 'container-buttons-disabled' : 'container-buttons'" -->
+    <div class="theme-slider">
+        <label class="switch" >
+            <input type="checkbox" (click)="switchTheme()">
+            <span class="slider round" [ngClass]="theme == 'light' ? 'slider-light' : 'slider-dark'"></span>
+          </label>
+    </div>
+    <div class="header">
+        <a> E-motion </a>
+    </div>
+</div>
+
+<div class="app-all-mobile">
+
+</div>

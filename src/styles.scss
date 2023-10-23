@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    margin: 0;
+
+    .body-light{
+        background-color: var(--primary-light-color);
+        color: var(--primary-light-text);
+        height: 100vh;
+        width: 100vw;
+        -webkit-transition: 1s;
+        transition: 1s;
+    }
+    .body-dark{
+        background-color: var(--primary-dark-color);
+        color: var(--primary-dark-text);
+        height: 100vh;
+        width: 100vw;
+        -webkit-transition: 1s;
+        transition: 1s;
+    }
+}
+
+:root{
+    // LIGHT
+    --primary-light-color: #efefef !important;
+    --primary-light-text: #212934 !important;
+
+    // DARK
+    --primary-dark-color: #212934 !important;
+    --primary-dark-text: white !important;
+}

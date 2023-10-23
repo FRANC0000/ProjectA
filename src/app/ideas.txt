@@ -1,0 +1,30 @@
+-calculadora
+-calendario
+-emociones (
+    
+    que pienso? que siento? que hice por mi?
+
+    felicidad
+    miedo
+    pena
+    rabia
+    asco
+    desprecio
+    sorpresa
+)
+
+-piedra papel tijera
+-recordatorios
+-gato # juego
+-mi presentacion
+-app de dibujar 
+-food order 
+-meme generatos
+-yt ttk audio o mp3
+-twitter clone
+-ig clone
+-to do kanban
+-link hub
+-tracker app
+-ai app (investigar)
+-music player
