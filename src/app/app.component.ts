@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   
   saluda = 'Hola mundo!'
-  theme = 'dark'
+  visibleBurguerButton = false;
+  esContainerMobile = false;
+
+  constructor(private router: Router, public appService : AppService){}
+
 
   ngOnInit(): void {
+    console.log('ngOnInit')
+    this.esContainerMobile =  this.appService.checkMobile();
+    this.visibleBurguerButton = false;
     this.saluda += ' Hola planeta';
 
     setTimeout(() => {
@@ -68,9 +77,31 @@ export class AppComponent implements OnInit{
     return cadena === cadenaReverso;
   }
 
-  switchTheme(){
-    if (this.theme == 'light'){ this.theme = 'dark'}
-    else {this.theme = 'light'}
-    console.log('switchTheme', this.theme)
+  clickHeaderItem(itemName :string){
+    console.log('itemName', itemName)
+    switch (itemName){
+      case 'e-motion': 
+        this.router.navigate(['/e-motion']);
+        break;
+      case 'calendario':
+        this.router.navigate(['/']); 
+        break;
+      case 'juegos': 
+        this.router.navigate(['/']);
+        break;
+      case 'home': 
+        this.router.navigate(['/']);
+        break;
+    }
+  }
+
+  burguerButton(){
+    if (!this.visibleBurguerButton){
+      this.visibleBurguerButton = true;
+    }
+    else{
+      this.visibleBurguerButton = false;
+    }
+    console.log('visibleBurguerButton', this.visibleBurguerButton);
   }
 }

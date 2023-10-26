@@ -3,6 +3,7 @@
 -emociones (
     
     que pienso? que siento? que hice por mi?
+    que hago cuando tengo ansiedad
 
     felicidad
     miedo
@@ -12,6 +13,8 @@
     desprecio
     sorpresa
 )
+-creador de cv
+-bpmn
 
 -piedra papel tijera
 -recordatorios

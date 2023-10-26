@@ -1,1 +1,50 @@
-<p>e-motion works!</p>
+<div class="e-motion-all-web" *ngIf="!appService.esContainerMobile">
+    <div class="e-motion-title" [ngClass]="appService.theme == 'light' ? 'title-light' : 'title-dark'" >E-MOTION</div>
+    <div class="preguntas-e-motion-web" [ngClass]="appService.theme == 'light' ? 'preguntas-light' : 'preguntas-dark'">
+        <p>
+            ¿Qué pienso? ¿Qué siento? ¿Qué hice por mi?
+        </p>
+    </div>
+
+    <div class="container-form-emotion" [ngClass]="appService.theme == 'light' ? 'container-light' : 'container-dark'">
+        <!-- 
+            <form nz-form [formGroup]="formCorreoTareaExterna" (ngSubmit)="submitFormCorreoTareaExterna()">
+                <nz-form-item *ngFor="let control of listCorreos; let i = index;" style="margin: 0;">
+                    <nz-form-control>
+                        <input type="email" nz-input placeholder="tucorreo@ejemplo.cl" style="width: 200px;"
+                        [attr.id]="control.id"
+                        [formControlName]="control.correo"/>
+
+                        <span nz-icon nzType="minus-circle-o" style="margin-left: 5px"
+                        class="dynamic-delete-button" nzTheme="outline" (click)="removeCorreoTareaExterna(control, $event)"></span>
+                    </nz-form-control>
+                </nz-form-item>
+
+            </form>
+         -->
+         <form class="form-e-motion" [formGroup]="formCrearEmocion">
+            <div class="form-item">
+                <label for="pensar" [ngClass]="appService.theme == 'light' ? 'label-light' : 'label-dark'" >Pensar:</label>
+                <input type="text" placeholder="Escribe tu pensar" formControlName="pensar">
+            </div>
+            <hr>
+            <div class="form-item">
+                <label for="sentir" [ngClass]="appService.theme == 'light' ? 'label-light' : 'label-dark'" >Sentir:</label>
+                <input type="text" placeholder="Escribe tu sentir" formControlName="sentir">
+            </div>
+            <hr>
+            <div class="form-item">
+                <label for="hacer" [ngClass]="appService.theme == 'light' ? 'label-light' : 'label-dark'" >Hacer:</label>
+                <input type="text" placeholder="Escribe que haces" formControlName="hacer">
+            </div>
+         </form>
+         <div class="form-buttons">
+             <button (click)="guardarformEMotion()" [ngClass]="appService.theme == 'light' ? 'button-light' : 'button-dark'" >Guardar</button>
+         </div>
+    </div>
+</div>
+
+
+<div class="e-motion-all-mobile" *ngIf="appService.esContainerMobile">
+    <p>e-motion mobile works!</p>
+</div>

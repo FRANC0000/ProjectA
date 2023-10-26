@@ -1,0 +1,102 @@
+.e-motion-all-web{
+    width: 100vw;
+    height: 100%;
+
+    .preguntas-e-motion-web{
+        padding: 20px;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        flex-direction: column;
+    }
+
+    .preguntas-light{
+        background-color: var(--tertiary-light-color);
+        
+    }
+    .preguntas-dark{
+        background-color: var(--tertiary-dark-color);
+
+    }
+
+    .e-motion-title{
+        margin: 0;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .title-light{
+        background-color: var(--secondary-light-color);
+    }
+
+    .title-dark{
+        background-color: var(--secondary-dark-color);
+    }
+
+    .container-form-emotion{
+        background-color: white;
+        height: 50vh;
+        width: 50vw;
+        position: relative;
+        top: -3vh;
+        left: 25vw;
+        border-radius: 20px;
+        // border: 3px solid red;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 70px 0px;
+    }
+
+    .container-light{
+        border: 3px solid var(--border-light-color)
+    }
+
+    .container-dark{
+        border: 3px solid var(--border-dark-color)
+    }
+
+    .form-e-motion{
+        margin: 30px
+        label{
+            color: black;
+        }
+        input{
+            border: none;
+        }
+        input:focus-visible{
+            outline: none;
+        }
+
+        .form-item{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+
+            label{
+                width: 20%;
+                font-weight: bold;
+            }
+
+            .label-light{
+                color: var(--secondary-light-color);
+            }
+
+            .label-dark{
+                color: var(--secondary-dark-color);
+            }
+
+            input{
+                width: 70%;
+            }
+        }
+    }
+    .form-buttons{
+        text-align: center;
+    }   
+}
+
+.e-motion-all-mobile{
+    width: 100vw;
+    height: 100%;
+}

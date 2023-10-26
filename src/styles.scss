@@ -24,9 +24,49 @@ body{
 :root{
     // LIGHT
     --primary-light-color: #efefef !important;
-    --primary-light-text: #212934 !important;
+    --primary-light-text: #6ECAE0 !important;
+    --primary-sun: url('assets/svg/sun.svg');
+    --secondary-light-color:   #325C66 !important;
+    --tertiary-light-color: #46808F !important;
+    --border-light-color: #488594 !important;
 
     // DARK
     --primary-dark-color: #212934 !important;
     --primary-dark-text: white !important;
+    --primary-moon: url('assets/svg/moon.svg');
+    --secondary-dark-color: #1b3353da !important;
+    --tertiary-dark-color: #003677da !important;
+    --border-dark-color: #003677da  !important;
+    
+    //BUTTON DEFAULT
+    button{
+        min-width: 100px;
+        border: 0px;
+        border-radius: 5px;
+        min-height: 25px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    button:hover{
+        background-color: gray;
+        transition: .8s;
+    }
+    
+   .button-light{
+        color: var(--primary-light-color) ;
+        background-color: var(--secondary-light-color);
+    }
+
+    .button-light:hover{
+        background-color: var(--tertiary-light-color);
+    }
+
+    .button-dark{
+        color: var(--primary-dark-text) ;
+        background-color: var(--secondary-dark-color);
+    }
+
+    .button-dark:hover{
+        background-color: var(--tertiary-dark-color);
+    }
 }
