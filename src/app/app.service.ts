@@ -8,7 +8,7 @@ export class AppService{
   constructor() { }
 
   public esContainerMobile = false;
-  public theme = 'light';
+  public theme = 'dark';
 
   public checkMobile() :boolean{
     let isMobileDevice = window.matchMedia("only screen and (max-width: 760px)").matches;

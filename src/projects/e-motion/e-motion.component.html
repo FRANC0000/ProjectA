@@ -7,21 +7,6 @@
     </div>
 
     <div class="container-form-emotion" [ngClass]="appService.theme == 'light' ? 'container-light' : 'container-dark'">
-        <!-- 
-            <form nz-form [formGroup]="formCorreoTareaExterna" (ngSubmit)="submitFormCorreoTareaExterna()">
-                <nz-form-item *ngFor="let control of listCorreos; let i = index;" style="margin: 0;">
-                    <nz-form-control>
-                        <input type="email" nz-input placeholder="tucorreo@ejemplo.cl" style="width: 200px;"
-                        [attr.id]="control.id"
-                        [formControlName]="control.correo"/>
-
-                        <span nz-icon nzType="minus-circle-o" style="margin-left: 5px"
-                        class="dynamic-delete-button" nzTheme="outline" (click)="removeCorreoTareaExterna(control, $event)"></span>
-                    </nz-form-control>
-                </nz-form-item>
-
-            </form>
-         -->
          <form class="form-e-motion" [formGroup]="formCrearEmocion">
             <div class="form-item">
                 <label for="pensar" [ngClass]="appService.theme == 'light' ? 'label-light' : 'label-dark'" >Pensar:</label>
@@ -41,6 +26,17 @@
          <div class="form-buttons">
              <button (click)="guardarformEMotion()" [ngClass]="appService.theme == 'light' ? 'button-light' : 'button-dark'" >Guardar</button>
          </div>
+    </div>
+
+    
+    <div class="clasificacion-e-motion">
+        <div *ngFor="let item of carruselEmotions; let i = index">
+            <div *ngIf="i == carruselSelected" class="item-carrusel">
+                {{item.name}}
+                {{item.descripcion}}
+                <img src="assets/e-motion/{{item.image}}" alt="" class="item-img-carrusel">
+            </div>
+        </div>
     </div>
 </div>
 

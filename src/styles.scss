@@ -69,4 +69,17 @@ body{
     .button-dark:hover{
         background-color: var(--tertiary-dark-color);
     }
+
+    //INPUT DEFAULT
+    input{
+        border: 1px solid gray;
+        border-radius: 5px;
+        height: 40px;
+        padding: 0px 5px;
+    }
+
+    //HR DEFAULT
+    hr{
+        margin: 0px 20px;
+    }
 }
